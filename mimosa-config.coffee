@@ -7,13 +7,25 @@
 # please!
 
 exports.config = {
+
+
+
+  # uncomment to allow wrapping, just uncomment one 'module' property
+  typescript:
+    module:"amd"
+    #module:"commonjs"
+
+
+
+
+
   ###
   The list of Mimosa modules to use for this application. The defaults (lint, server, require,
   minify, live-reload) come bundled with Mimosa and do not need to be installed.  The 'mimosa-'
   that preceeds all Mimosa module names is assumed, however you can use it if you want.  If a
   module is listed here that Mimosa is unaware of, Mimosa will attempt to install it.
   ###
-  modules: ["server","require","minify","lint","live-reload","web-package"]
+  #modules: ["server","require","minify","lint","live-reload","web-package"]
 
   # watch:
     # sourceDir: "assets"             # directory location of web assets, can be relative to
@@ -32,7 +44,7 @@ exports.config = {
                                       # at once. If the throttle is set to 0, no throttling is
                                       # performed. Recommended to leave this set at 0, the
                                       # default, until you start encountering EMFILE problems.
-	
+
   # compilers:
     # extensionOverrides:       # A list of extension overrides, format is:
                                 # [compilerName]:[arrayOfExtensions], see
@@ -57,7 +69,7 @@ exports.config = {
   # the extensions of files to copy from sourceDir to compiledDir. vendor js/css, images, etc.
   ###
   # copy:
-    # extensions: ["js","css","png","jpg","jpeg","gif","html","eot","svg","ttf","woff","otf","yaml","kml"]	
+    # extensions: ["js","css","png","jpg","jpeg","gif","html","eot","svg","ttf","woff","otf","yaml","kml"]
 
   # growl:
     # onStartup: false       # Controls whether or not to Growl when assets successfully
@@ -70,7 +82,7 @@ exports.config = {
       # javascript: true     # growl on successful compilation? will always send on failure
       # css: true            # growl on successful compilation? will always send on failure
       # template: true       # growl on successful compilation? will always send on failure
-      # copy: true           # growl on successful copy?	
+      # copy: true           # growl on successful copy?
 
   server:                      # configuration for server when server option is enabled via CLI
     # useDefaultServer: false    # whether or not mimosa starts a default server for you, when
@@ -85,7 +97,7 @@ exports.config = {
       # compileWith: 'jade'      # Other valid options: "hogan", "html", "ejs". The compiler for
                                  # your views.
       # extension: 'jade'        # extension of your server views
-      # path: 'views'            # path from the root of your project to your views	
+      # path: 'views'            # path from the root of your project to your views
 
   # require:                 # configuration for requirejs options.
     # verify:                # settings for requirejs path verification
@@ -100,7 +112,7 @@ exports.config = {
                              # make tweaks uncomment this line and add the r.js config
                              # (http://requirejs.org/docs/optimization.html#options) as new
                              # paramters inside the overrides ojbect. To unset Mimosa's defaults,
-                             # set a property to null	
+                             # set a property to null
 
   # minify:                     # Configuration for non-require minification/compression via
                                 # uglify using the --minify flag.
@@ -109,7 +121,7 @@ exports.config = {
                                 # like jquery.min.js, is assumed to already be minified and is
                                 # ignored by default. Paths can be relative to the
                                 # watch.compiledDir, or absolute.  Paths are to compiled files,
-                                # so '.js' rather than '.coffee'	
+                                # so '.js' rather than '.coffee'
 
   # lint:                      # settings for js, css linting/hinting
     # compiled:                # settings for compiled files
@@ -128,14 +140,14 @@ exports.config = {
       # javascript:            # Settings: http://www.jshint.com/options/
         # plusplus: true       # This is an example override, this is not a default
       # css:                   # Settings: https://github.com/stubbornella/csslint/wiki/Rules
-        # floats: false        # This is an example override, this is not a default	
+        # floats: false        # This is an example override, this is not a default
 
   # liveReload:                   # Configuration for live-reload
     # enabled:true                # Whether or not live-reload is enabled
     # additionalDirs:["views"]    # Additional directories outside the watch.compiledDir
                                   # that you would like to have trigger a page refresh,
                                   # like, by default, static views. Is string path,
-                                  # can be relative to project root, or absolute	
+                                  # can be relative to project root, or absolute
 
   ###
   The webPackage module works hand in hand with the mimosa-server module to package web
@@ -157,4 +169,6 @@ exports.config = {
     as part of a package.  By default the watch.sourceDir is added to this list during processing.
     ###
     # exclude:["README.md","node_modules","mimosa-config.coffee","mimosa-config.js","assets",".git"]
+
+
 }

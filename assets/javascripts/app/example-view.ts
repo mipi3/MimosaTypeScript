@@ -1,17 +1,16 @@
-/// <reference path="../vendor/require.d.ts" />
+/// <reference path="../vendor/jquery.d.ts" />
+/// <reference path="../template-dust.d.ts" />
 
-define(['jquery', 'templates'], function($, templates) {
-  var ExampleView = (function() {
+export class ExampleView {
 
-    function ExampleView() {}
+  render(element: HTMLElement) {
+    templates.render('example', {name: 'Dust', css: 'less'}, function(error, output) {
+      $(element).append(output);
+    });
 
-    ExampleView.prototype.render = function(element) {
-      $(element).append(templates.example({name: 'Handlebars',css: 'stylus'}));
-      $(element).append(templates['another-example']({name: 'Handlebars'}));
-    };
+    templates.render('another-example', {name: 'Dust'}, function(error, output) {
+      $(element).append(output);
+    });
+  };
+}
 
-    return ExampleView;
-
-  })();
-  return ExampleView;
-});
