@@ -11,7 +11,6 @@ Install latest Mimosa with some TypeScript compiling
 * git clone git://github.com/dbashford/mimosa.git
 * cd mimosa
 * npm install -g
-
 * Fork this project
 * git clone [your fork]
 * cd MimosaTypeScript
