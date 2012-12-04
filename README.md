@@ -12,12 +12,10 @@ Install latest Mimosa with some TypeScript compiling
 * cd mimosa
 * npm install -g
 
-Fork this project
-
+* Fork this project
 * git clone [your fork]
 * cd MimosaTypeScript
 * mimosa watch -s
 
-* Make the code idiomatic TypeScript?
-
+Everything seems to compile, but something isn't clicking somewhere.
 
