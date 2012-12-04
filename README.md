@@ -18,3 +18,5 @@ Install latest Mimosa with some TypeScript compiling
 
 Everything seems to compile, but something isn't clicking somewhere.
 
+At the top of the config file is the only typescript config exposed: the choice of wrapping.
+https://github.com/dbashford/MimosaTypeScript/blob/master/mimosa-config.coffee
